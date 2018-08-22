@@ -7,7 +7,7 @@ body, html {
 }
 
 .container {
-    padding: 0 10%;
+    padding: 0 5%;
 }
 
 h1, h2, p, a {
@@ -35,28 +35,45 @@ header {
     z-index: 2;
 
     .content {
-        display: grid;
-        grid-template-columns: 30% 70%;
-        align-content: center;
+        margin-top: 20px;
     
-        .cols {
-            padding: 5px 0;
-        }
-    
-        .brand {
-            a {
-                text-decoration: none;
-                color: #fff;
-                text-transform: uppercase;
-                font-size: 40px;
+        .menu {
+            float: left;
+
+            .line {
+                background-color: white;
+                width: 25px;
+                height: 3px;
+                margin-bottom: 5px;
             }
+        }
+
+        .menu:hover {
+            cursor: pointer;
+        }
+
+        .icons {
+            float: right;
+            margin-top: 5px;
+            
+            ul {
+                margin: 0;
+                padding: 0;
+            }
+
+            ul li, p {
+                list-style-type: none;
+                display: inline;
+                margin: 3px;
+            }
+
         }
 
     }
 
-
     nav {
         margin-top: 15px;
+        display: none;
 
         ul {
             margin: 0;
@@ -91,9 +108,10 @@ header {
         url(bg.jpg);
     background-repeat: no-repeat;
     background-size: cover;
+    clip-path: polygon(0 0, 100% 0, 100% 87%, 0% 100%);
 
     .content {
-        padding: 70px 0 30px;
+        padding: 70px 0 70px;
         display: grid;
         grid-template-columns: auto auto;
         grid-gap: 20px;
@@ -137,19 +155,19 @@ header {
 
             }
 
-        }
-
-        .icons {
-            
-            ul {
-                margin: 20px 0;
-                padding: 0;
+            .btn {
+                background: transparent;
+                color: #fff;
+                padding: 10px 30px;
+                border: 1px solid $secondary;
+                font-family: 'Montserrat', sans-serif;
+                font-size: 15px;
             }
 
-            ul li {
-                list-style-type: none;
-                display: inline;
-                margin: 5px;
+            .btn:hover {
+                background: $secondary;
+                color: $primary;
+                cursor: pointer;
             }
 
         }
