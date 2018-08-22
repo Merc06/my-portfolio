@@ -1,0 +1,159 @@
+$primary: #332c23;
+$secondary: #b1ddf1;
+
+
+body, html {
+    margin: 0;
+}
+
+.container {
+    padding: 0 10%;
+}
+
+h1, h2, p, a {
+    font-family: 'Montserrat', sans-serif;
+    color: #fff;
+}
+
+h1 {
+    font-size: 65px;
+    text-transform: uppercase;
+}
+
+h2 {
+    font-size: 30px;
+}
+
+a:hover {
+    color: $secondary;
+}
+
+header {
+    background: transparent;
+    position: fixed;
+    width: 100%;
+    z-index: 2;
+
+    .content {
+        display: grid;
+        grid-template-columns: 30% 70%;
+        align-content: center;
+    
+        .cols {
+            padding: 5px 0;
+        }
+    
+        .brand {
+            a {
+                text-decoration: none;
+                color: #fff;
+                text-transform: uppercase;
+                font-size: 40px;
+            }
+        }
+
+    }
+
+
+    nav {
+        margin-top: 15px;
+
+        ul {
+            margin: 0;
+            float: right;
+        }
+
+        ul li {
+            list-style-type: none;
+            display: inline-block;
+        }
+
+        ul li a {
+            text-decoration: none;
+            text-transform: uppercase;
+            color: #fff;
+            margin-left: 20px;
+        }
+
+    }
+
+}
+
+
+.jumbotron {
+    background: 
+        /* top, transparent red, faked with gradient */ 
+        linear-gradient(
+        rgba(51, 44, 35, 0.7),
+        rgba(51, 44, 35, 0.7)
+        ),
+        /* bottom, image */
+        url(bg.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+
+    .content {
+        padding: 70px 0 30px;
+        display: grid;
+        grid-template-columns: auto auto;
+        grid-gap: 20px;
+
+        .photo img {
+            float: right;
+            max-width: 100%;
+            width: 290px;
+            clip-path: polygon(20% 0%, 80% 0%, 100% 20%, 100% 80%, 80% 100%, 20% 100%, 0% 80%, 0% 20%);
+        }
+
+        .info {
+            max-width: 100%;
+
+            h1 {
+                margin-bottom: 0;
+
+                /* #### Mobile Phones Portrait or Landscape #### */
+                @media screen and (max-width: 725px){
+                    /* some CSS here */
+                    font-size: 30px;
+                }
+
+                /* #### Tablets Portrait or Landscape #### */
+                @media screen and (min-width: 725px) and (max-width: 1166px){
+                    /* some CSS here */
+                    font-size: 60px;
+                }
+
+            }
+
+            h2 {
+                margin-top: 5px;
+                padding: 5px 15px;
+                font-weight: normal;
+                background: lighten(rgba(51, 44, 35, 0.7), 1%);
+
+                @media only screen and (max-width: 1166px) {
+                    font-size: 15px;
+                }
+
+            }
+
+        }
+
+        .icons {
+            
+            ul {
+                margin: 20px 0;
+                padding: 0;
+            }
+
+            ul li {
+                list-style-type: none;
+                display: inline;
+                margin: 5px;
+            }
+
+        }
+
+    }
+
+}
