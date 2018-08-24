@@ -53,22 +53,26 @@
         <div class="container">
             <div class="content">
                 <div class="photo">
-                    <img src="img/profile.jpg" alt="Marc">
+                    <img src="img/photo.png" alt="Marc">
                 </div>
                 <div class="info">
-                    <h1>Marc Louie Asoy</h1>
-                    <h2>Programmer / Web Developer</h2>
-                    <button class="btn">Let's Get Started!</button>
+                    <div>
+                        <h1>Marc Louie <span>Asoy</span></h1>
+                        <h2>Programmer / Web Developer</h2>
+                        <button class="btn">Let's Get Started!</button>
+                    </div>
                 </div> 
             </div>
         </div>
+        <div class="overlay"></div>
     </div>
 
     <!--==========================
         About Me Section
     ============================-->
-    <section class="about">
+    <section id="about">
         <div class="container">
+            <h1>About <span>Me!</span></h1>
             <div class="content">
                 <div class="about-info">
                     <h2>Personal Information</h2>
@@ -89,35 +93,43 @@
                             <td width="30%"><p>:</p></td>
                             <td width="40%"><p>May 6, 1996</p></td>
                         </tr>
+                        <tr>
+                            <td width="30%"><p>Birthdate</p></td>
+                            <td width="30%"><p>:</p></td>
+                            <td width="40%"><p>May 6, 1996</p></td>
+                        </tr>
+                        <tr>
+                            <td width="30%"><p>Birthdate</p></td>
+                            <td width="30%"><p>:</p></td>
+                            <td width="40%"><p>May 6, 1996</p></td>
+                        </tr>
+                        <tr>
+                            <td width="30%"><p>Birthdate</p></td>
+                            <td width="30%"><p>:</p></td>
+                            <td width="40%"><p>May 6, 1996</p></td>
+                        </tr>
                     </table>
 
                     <h2>SKILLS</h2>
                     <hr>
-                    <!-- <div class="skills">
-                        <ul>
-                            <li>
-                                <p>HTML / CSS / SASS</p>
-                            </li>
-                            <li>
-                                <p>JAVASCRIPT / JQUERY / AJAX</p>
-                            </li>
-                            <li>
-                                <p>PHP / LARAVEL</p>
-                            </li>
-                            <li>
-                                <p>BOOTSTRAP</p>
-                            </li>
-                            <li>
-                                <p>MY SQL DATABASE</p>
-                            </li>
-                            <li>
-                                <p>WORDPRESS</p>
-                            </li>
-                        </ul>
-                    </div> -->
-                    <p>HTML</p>
-                    <div class="bar">
-                        <div class="skills one"><p>90%</p></div>
+                    
+                    <div class="bar">    
+                        <div class="skills one"><p>HTML / CSS / SASS </p> <p id="percent">90%</p></div>
+                    </div>
+                    <div class="bar">    
+                        <div class="skills two"><p>JAVASCRIPT / JQUERY / AJAX </p> <p id="percent">70%</p></div>
+                    </div>
+                    <div class="bar">    
+                        <div class="skills three"><p>PHP / LARAVEL </p> <p id="percent">80%</p></div>
+                    </div>
+                    <div class="bar">    
+                        <div class="skills four"><p>BOOTSTRAP </p> <p id="percent">90%</p></div>
+                    </div>
+                    <div class="bar">    
+                        <div class="skills five"><p>MY SQL DATABASE / FIREBASE </p> <p id="percent">70%</p></div>
+                    </div>
+                    <div class="bar">    
+                        <div class="skills six"><p>WORDPRESS </p> <p id="percent">80%</p></div>
                     </div>
                 </div>
     
@@ -127,6 +139,64 @@
             </div>
         </div>
     </section>
+
+    <!--==========================
+        Projects Section
+    ============================-->
+    <section id="project">
+        <div class="container">
+            <h1>My <span>Projects!</span></h1>
+            <div class="content">
+                <div class="card">
+                    <div class="card-header">
+                        <img src="img/web1.jpg" alt="1st Project">
+                    </div>
+                    <div class="card-content">
+                        <p>Inventory System</p>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <div class="card-header">
+                        <img src="img/web2.jpg" alt="1st Project">
+                    </div>
+                    <div class="card-content"><p>Lorem ipsum dolor sit amet.</p></div>
+                </div>
+
+                <div class="card">
+                    <div class="card-header">
+                        <img src="img/web3.jpg" alt="1st Project">
+                    </div>
+                    <div class="card-content"><p>Lorem ipsum dolor, sit amet consectetur adipisicing.</p></div>
+                </div>
+
+                <div class="card">
+                        <div class="card-header">
+                            <img src="img/web1.jpg" alt="1st Project">
+                        </div>
+                        <div class="card-content">
+                            <p>Inventory System</p>
+                        </div>
+                    </div>
+    
+                    <div class="card">
+                        <div class="card-header">
+                            <img src="img/web2.jpg" alt="1st Project">
+                        </div>
+                        <div class="card-content"><p>Lorem ipsum dolor sit amet.</p></div>
+                    </div>
+    
+                    <div class="card">
+                        <div class="card-header">
+                            <img src="img/web3.jpg" alt="1st Project">
+                        </div>
+                        <div class="card-content"><p>Lorem ipsum dolor, sit amet consectetur adipisicing.</p></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
 
 </body>
 </html>
