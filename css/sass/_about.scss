@@ -1,0 +1,82 @@
+
+// ABOUT ME SECTION!
+
+#about {
+    background: darken(rgba(255, 255, 255, 0.938), 2%);
+    clip-path: polygon(0 5%, 100% 0, 100% 100%, 0 95%);
+    padding: 5vh 0 10vh;
+
+    h1 {
+        margin: 0;
+        padding: 2vw 5vw;
+        text-align: right;
+    }
+
+    .content {
+        padding: 0 80px;
+        display: grid;
+        grid-template-columns: 60% 40%;
+        grid-gap: 40px;
+
+        h2 {
+            margin-bottom: 0;
+        }
+
+        .about-info {
+            margin-top: 30px;
+
+            table {
+                text-align: center;
+                width: 100%;
+
+                p {
+                    margin: 3px;
+                }
+
+            }
+
+            .bar {
+                width: 100%;
+                background-color: #ddd;
+                margin: 10px 0;
+            }
+
+            .skills {
+                padding: 10px;
+                color: white;
+
+                p {
+                    margin: 0;
+                    display: inline;
+                }
+
+                #percent {
+                    float: right;
+                }
+
+            }
+
+            .one {width: 90%; background-color: $secondary;}
+            .two {width: 70%; background-color: $secondary;}
+            .three {width: 80%; background-color: $secondary;}
+            .four {width: 90%; background-color: $secondary;}
+            .five {width: 70%; background-color: $secondary;}
+            .six {width: 80%; background-color: $secondary;}
+
+        }
+
+        .about-photo {
+            text-align: center;
+
+            img {
+                max-width: 100%;
+                width: 50vh;
+                -webkit-filter: drop-shadow(5px 5px 5px rgba(34, 34, 34, 0.596));
+                filter: drop-shadow(5px 5px 5px rgba(34, 34, 34, 0.596));
+            }
+        }
+
+    }
+
+}
+

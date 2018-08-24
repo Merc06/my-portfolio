@@ -1,0 +1,112 @@
+// JUMBOTRON CSS
+
+.jumbotron {
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    height: 100%;
+    position: relative;
+    overflow: hidden;
+    content: "";
+
+    &::before {
+        background: 
+        /* top, transparent red, faked with gradient */ 
+        linear-gradient(
+        rgba(51, 44, 35, 0.7),
+        rgba(51, 44, 35, 0.7)
+        ),
+        /* bottom, image */
+        url(bg.jpg);
+        background-repeat: no-repeat;
+        background-position: center top;
+        background-size: cover;
+        content: '';
+        height: 115%;
+        left: 0;
+        position: fixed;
+        top: 0;
+        width: 100%;
+        will-change: transform;
+        z-index: -1;
+    }
+
+    p, a{
+        font-family: 'Montserrat', sans-serif;
+        color: #fff;
+    }
+
+    h1, h2 {
+        font-family: 'Ubuntu', sans-serif;
+        color: #fff;
+    }
+    
+    h1 {
+        font-size: 5vw;
+        text-transform: uppercase;
+    }
+    
+    h2 {
+        font-size: 2vw;
+    }
+
+    .content {
+        margin: auto 0;
+        height: 100vh;
+        display: grid;
+        grid-template-columns: auto auto;
+        grid-gap: 20px;
+
+        .photo img {
+            float: right;
+            width: 15vw;
+            position: relative;
+            top: 50%;
+            transform: translateY(-50%);
+            border-right: 2px solid $secondary;
+            padding-right: 20px;
+           
+        }
+
+        .info {
+            width: 100%;
+            
+            div {
+                position: relative;
+                top: 50%;
+                transform: translateY(-50%);
+            }
+
+            h1 {
+                margin: 0;
+            }
+
+            h2 {
+                margin-top: 5px;
+                padding: 5px 15px;
+                font-weight: normal;
+                background: lighten(rgba(51, 44, 35, 0.7), 1%);
+
+            }
+
+            .btn {
+                background: transparent;
+                color: $secondary;
+                padding: 1vw 3vw;
+                border: 1px solid $secondary;
+                font-family: 'Montserrat', sans-serif;
+                font-size: 1vw;
+            }
+
+            .btn:hover {
+                background: $secondary;
+                color: $primary;
+                cursor: pointer;
+            }
+
+        }
+
+    }
+
+}
+

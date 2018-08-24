@@ -1,0 +1,73 @@
+// HEADER CSS
+
+header {
+    background: transparent;
+    position: fixed;
+    width: 100%;
+    z-index: 5;
+
+    p, a {
+        font-family: 'Montserrat', sans-serif;
+        color: #fff;
+    }
+
+    .content {
+        margin-top: 20px;
+    
+        .menu {
+            float: left;
+
+            .line {
+                background-color: white;
+                width: 25px;
+                height: 3px;
+                margin-bottom: 5px;
+            }
+        }
+
+        .menu:hover {
+            cursor: pointer;
+        }
+
+        .icons {
+            float: right;
+            margin-top: 5px;
+            
+            ul {
+                margin: 0;
+                padding: 0;
+            }
+
+            ul li, p {
+                display: inline;
+                margin: 3px;
+            }
+
+        }
+
+    }
+
+    nav {
+        margin-top: 15px;
+        display: none;
+
+        ul {
+            margin: 0;
+            float: right;
+        }
+
+        ul li {
+            list-style-type: none;
+            display: inline-block;
+        }
+
+        ul li a {
+            text-decoration: none;
+            text-transform: uppercase;
+            color: #fff;
+            margin-left: 20px;
+        }
+
+    }
+
+}
