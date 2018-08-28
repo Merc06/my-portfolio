@@ -1,36 +1,40 @@
 body, html {
   margin: 0;
+  font-size: 14px;
 }
 
 .container {
   padding: 0 5%;
 }
 
-p, a {
+p, a, h2, h3 {
   font-family: 'Montserrat', sans-serif;
-  color: #332c23;
-}
-
-h1, h2 {
-  font-family: 'Ubuntu', sans-serif;
-  text-transform: uppercase;
+  color: #fff;
 }
 
 h1 {
-  font-size: 5vw;
-  text-transform: uppercase;
-}
-
-h1 span {
-  color: #b1ddf1;
+  font-size: 6vw;
+  font-family: 'Ubuntu', sans-serif;
+  color: #fff;
 }
 
 h2 {
-  font-size: 2vw;
+  font-size: 4vw;
+  font-weight: bold;
+  margin: 0 0 40px;
 }
 
-p, a {
-  font-size: 14px;
+h2 span {
+  color: #b1ddf1;
+  text-shadow: 0 0 2px #332c23;
+  /* horizontal-offset vertical-offset 'blur' colour */
+  -moz-text-shadow: 0 0 2px #332c23;
+  -webkit-text-shadow: 0 0 2px #332c23;
+}
+
+h3 {
+  font-size: 2vw;
+  font-weight: normal;
 }
 
 a:hover {
@@ -146,25 +150,6 @@ header nav ul li a {
   z-index: -1;
 }
 
-.jumbotron p, .jumbotron a {
-  font-family: 'Montserrat', sans-serif;
-  color: #fff;
-}
-
-.jumbotron h1, .jumbotron h2 {
-  font-family: 'Ubuntu', sans-serif;
-  color: #fff;
-}
-
-.jumbotron h1 {
-  font-size: 5vw;
-  text-transform: uppercase;
-}
-
-.jumbotron h2 {
-  font-size: 2vw;
-}
-
 .jumbotron .content {
   margin: auto 0;
   height: 100vh;
@@ -201,10 +186,9 @@ header nav ul li a {
   margin: 0;
 }
 
-.jumbotron .content .info h2 {
+.jumbotron .content .info h3 {
   margin-top: 5px;
   padding: 5px 15px;
-  font-weight: normal;
   background: rgba(54, 47, 37, 0.7);
 }
 
@@ -227,30 +211,32 @@ header nav ul li a {
   background: rgba(250, 250, 250, 0.938);
   -webkit-clip-path: polygon(0 5%, 100% 0, 100% 100%, 0 95%);
           clip-path: polygon(0 5%, 100% 0, 100% 100%, 0 95%);
-  padding: 5vh 0 10vh;
+  padding: 10vh 0 10vh;
 }
 
-#about h1 {
-  margin: 0;
-  padding: 2vw 5vw;
+#about h2 {
+  color: #332c23;
   text-align: right;
+  margin: 30px 0 40px;
+}
+
+#about h3, #about p {
+  color: #332c23;
+}
+
+#about h3 {
+  font-size: 1.5vw;
+  margin: 0;
+  padding-top: 30px;
 }
 
 #about .content {
   padding: 0 80px;
   display: -ms-grid;
   display: grid;
-  -ms-grid-columns: 60% 40%;
-      grid-template-columns: 60% 40%;
+  -ms-grid-columns: 70% 30%;
+      grid-template-columns: 70% 30%;
   grid-gap: 40px;
-}
-
-#about .content h2 {
-  margin-bottom: 0;
-}
-
-#about .content .about-info {
-  margin-top: 30px;
 }
 
 #about .content .about-info table {
@@ -318,29 +304,13 @@ header nav ul li a {
 
 #about .content .about-photo img {
   max-width: 100%;
-  width: 50vh;
+  width: auto;
   -webkit-filter: drop-shadow(5px 5px 5px rgba(34, 34, 34, 0.596));
   filter: drop-shadow(5px 5px 5px rgba(34, 34, 34, 0.596));
 }
 
 #project {
   padding: 3vh 0 10vh;
-}
-
-#project h1, #project h2 {
-  font-family: 'Ubuntu', sans-serif;
-  color: #fff;
-}
-
-#project h1 {
-  font-size: 5vw;
-  text-transform: uppercase;
-  margin: 0;
-  padding: 0 0 5vw 0;
-}
-
-#project h2 {
-  font-size: 2vw;
 }
 
 #project .content {
@@ -363,5 +333,28 @@ header nav ul li a {
 
 #project .content .card .card-content {
   text-align: center;
+}
+
+#contact {
+  background: rgba(250, 250, 250, 0.938);
+  -webkit-clip-path: polygon(0 5%, 100% 0, 100% 100%, 0 95%);
+          clip-path: polygon(0 5%, 100% 0, 100% 100%, 0 95%);
+  padding: 10vh 0 10vh;
+}
+
+#contact h2 {
+  color: #332c23;
+  text-align: right;
+  margin: 30px 0 40px;
+}
+
+#contact h3, #contact p {
+  color: #332c23;
+}
+
+#contact h3 {
+  font-size: 1.5vw;
+  margin: 0;
+  padding-top: 30px;
 }
 /*# sourceMappingURL=styles.css.map */

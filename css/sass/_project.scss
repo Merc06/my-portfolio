@@ -3,22 +3,6 @@
 #project {
     padding: 3vh 0 10vh;
 
-    h1, h2 {
-        font-family: 'Ubuntu', sans-serif;
-        color: #fff;
-    }
-    
-    h1 {
-        font-size: 5vw;
-        text-transform: uppercase;
-        margin: 0;
-        padding: 0 0 5vw 0;
-    }
-    
-    h2 {
-        font-size: 2vw;
-    }
-
     .content {
         display: grid;
         grid-template-columns: 1fr 1fr 1fr;

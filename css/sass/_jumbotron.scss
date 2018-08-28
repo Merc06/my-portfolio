@@ -31,25 +31,6 @@
         z-index: -1;
     }
 
-    p, a{
-        font-family: 'Montserrat', sans-serif;
-        color: #fff;
-    }
-
-    h1, h2 {
-        font-family: 'Ubuntu', sans-serif;
-        color: #fff;
-    }
-    
-    h1 {
-        font-size: 5vw;
-        text-transform: uppercase;
-    }
-    
-    h2 {
-        font-size: 2vw;
-    }
-
     .content {
         margin: auto 0;
         height: 100vh;
@@ -81,10 +62,9 @@
                 margin: 0;
             }
 
-            h2 {
+            h3 {
                 margin-top: 5px;
                 padding: 5px 15px;
-                font-weight: normal;
                 background: lighten(rgba(51, 44, 35, 0.7), 1%);
 
             }
