@@ -52,7 +52,7 @@
         .info {
             width: 100%;
             
-            div {
+            .wrapper {
                 position: relative;
                 top: 50%;
                 transform: translateY(-50%);
@@ -60,6 +60,10 @@
 
             h1 {
                 margin: 0;
+
+                span {
+                    @include text-secondary
+                }
             }
 
             h3 {

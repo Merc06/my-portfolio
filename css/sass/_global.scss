@@ -11,13 +11,13 @@ body, html {
 }
 
 p, a, h2, h3 {
-    font-family: 'Montserrat', sans-serif;
+    font-family: $secondary-font;
     color: #fff;
 }
 
 h1 {
     font-size: 6vw;
-    font-family: 'Ubuntu', sans-serif;
+    font-family: $head-font;
     color: #fff;
 
 }
@@ -28,10 +28,7 @@ h2 {
     margin: 0 0 40px;
 
     span {
-        color: $secondary;
-        text-shadow: 0 0 2px $primary; /* horizontal-offset vertical-offset 'blur' colour */
-        -moz-text-shadow: 0 0 2px $primary;
-        -webkit-text-shadow: 0 0 2px $primary;    
+        @include text-secondary; 
     }
 
 }

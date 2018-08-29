@@ -3,6 +3,10 @@
 #project {
     padding: 3vh 0 10vh;
 
+    p {
+        color: $primary;
+    }
+
     .content {
         display: grid;
         grid-template-columns: 1fr 1fr 1fr;

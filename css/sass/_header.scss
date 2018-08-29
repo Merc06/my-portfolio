@@ -1,10 +1,20 @@
 // HEADER CSS
 
 header {
-    background: transparent;
     position: fixed;
     width: 100%;
     z-index: 5;
+    padding-bottom: 20px;
+
+    &.scrolled {
+        padding: 5px 0;
+        background-color: lighten(rgba($primary, .85), 5%) !important;
+        transition: all 300ms linear;
+    }
+
+    &.scrolledUp {
+        transition: all 300ms linear;
+    }
 
     p, a {
         font-family: 'Montserrat', sans-serif;
@@ -12,17 +22,26 @@ header {
     }
 
     .content {
-        margin-top: 20px;
-    
+        margin: 20px 0;
+        display: grid;
+        grid-template-columns: 5% 15% 80%;
+
         .menu {
-            float: left;
+            margin-top: 2px;
 
             .line {
                 background-color: white;
                 width: 25px;
                 height: 3px;
-                margin-bottom: 5px;
+                margin: 5px 0;
             }
+        }
+
+        .brand {
+            color: white;
+            font-size: 2em;
+            font-family: $head-font;
+            font-weight: bold;
         }
 
         .menu:hover {
@@ -30,8 +49,8 @@ header {
         }
 
         .icons {
-            float: right;
             margin-top: 5px;
+            justify-self: right;
             
             ul {
                 margin: 0;
@@ -71,3 +90,5 @@ header {
     }
 
 }
+
+
