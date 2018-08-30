@@ -54,12 +54,11 @@ header {
   position: fixed;
   width: 100%;
   z-index: 5;
-  padding-bottom: 20px;
+  background-color: rgba(51, 44, 35, 0.85) !important;
 }
 
 header.scrolled {
-  padding: 5px 0;
-  background-color: rgba(66, 57, 45, 0.85) !important;
+  padding: 10px 0;
   -webkit-transition: all 300ms linear;
   transition: all 300ms linear;
 }
@@ -78,12 +77,17 @@ header .content {
   margin: 20px 0;
   display: -ms-grid;
   display: grid;
-  -ms-grid-columns: 5% 15% 80%;
-      grid-template-columns: 5% 15% 80%;
+  width: 100%;
+  -ms-grid-columns: 10% 20% 70%;
+      grid-template-columns: 10% 20% 70%;
 }
 
 header .content .menu {
   margin-top: 2px;
+  cursor: pointer;
+  max-width: 25px;
+  -webkit-transition: all .3s ease-out;
+  transition: all .3s ease-out;
 }
 
 header .content .menu .line {
@@ -91,6 +95,27 @@ header .content .menu .line {
   width: 25px;
   height: 3px;
   margin: 5px 0;
+  -webkit-transition: all .3s ease-out;
+  transition: all .3s ease-out;
+}
+
+header .content .menu.close {
+  -webkit-transform: rotate(180deg);
+          transform: rotate(180deg);
+}
+
+header .content .menu.close .line:nth-child(1) {
+  -webkit-transform: rotate(45deg) translate(5px, 5px);
+          transform: rotate(45deg) translate(5px, 5px);
+}
+
+header .content .menu.close .line:nth-child(2) {
+  opacity: 0;
+}
+
+header .content .menu.close .line:nth-child(3) {
+  -webkit-transform: rotate(-45deg) translate(7px, -6px);
+          transform: rotate(-45deg) translate(7px, -6px);
 }
 
 header .content .brand {
@@ -98,9 +123,11 @@ header .content .brand {
   font-size: 2em;
   font-family: "Ubuntu", sans-serif;
   font-weight: bold;
+  letter-spacing: 4px;
 }
 
-header .content .menu:hover {
+header .content .brand:hover {
+  color: #b1ddf1;
   cursor: pointer;
 }
 
@@ -120,26 +147,15 @@ header .content .icons ul li, header .content .icons p {
   margin: 3px;
 }
 
-header nav {
-  margin-top: 15px;
+header .menu-nav {
   display: none;
+  padding: 0;
 }
 
-header nav ul {
-  margin: 0;
-  float: right;
-}
-
-header nav ul li {
-  list-style-type: none;
-  display: inline-block;
-}
-
-header nav ul li a {
-  text-decoration: none;
-  text-transform: uppercase;
-  color: #fff;
-  margin-left: 20px;
+header .menu-nav.show {
+  display: block;
+  text-align: center;
+  height: 100vh;
 }
 
 .jumbotron {

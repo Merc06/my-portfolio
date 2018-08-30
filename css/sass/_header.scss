@@ -4,12 +4,12 @@ header {
     position: fixed;
     width: 100%;
     z-index: 5;
-    padding-bottom: 20px;
+    background-color: rgba($primary, .85) !important;
 
     &.scrolled {
-        padding: 5px 0;
-        background-color: lighten(rgba($primary, .85), 5%) !important;
+        padding: 10px 0;
         transition: all 300ms linear;
+
     }
 
     &.scrolledUp {
@@ -24,17 +24,43 @@ header {
     .content {
         margin: 20px 0;
         display: grid;
-        grid-template-columns: 5% 15% 80%;
+        width: 100%;
+        grid-template-columns: 10% 20% 70%;
 
         .menu {
             margin-top: 2px;
+            cursor: pointer;
+            max-width: 25px;
+            @include easeOut;
 
             .line {
                 background-color: white;
                 width: 25px;
                 height: 3px;
                 margin: 5px 0;
+                @include easeOut;
             }
+
+            // Rotate Menu button into X
+            &.close {
+                transform: rotate(180deg);
+
+                .line {
+                    // Line 1 - Rotate
+                    &:nth-child(1) {
+                        transform: rotate(45deg) translate(5px, 5px);
+                    }
+                    // Line 2 - Hide
+                    &:nth-child(2) {
+                        opacity: 0;
+                    }
+                    // Line 3 - Rotate
+                    &:nth-child(3) {
+                        transform: rotate(-45deg) translate(7px, -6px);
+                    }
+                }
+            }
+
         }
 
         .brand {
@@ -42,10 +68,12 @@ header {
             font-size: 2em;
             font-family: $head-font;
             font-weight: bold;
-        }
+            letter-spacing: 4px;
 
-        .menu:hover {
-            cursor: pointer;
+            &:hover {
+                color: $secondary;
+                cursor: pointer;
+            }
         }
 
         .icons {
@@ -66,27 +94,15 @@ header {
 
     }
 
-    nav {
-        margin-top: 15px;
-        display: none;
+    .menu-nav {
+      display: none;
+      padding: 0;
 
-        ul {
-            margin: 0;
-            float: right;
-        }
-
-        ul li {
-            list-style-type: none;
-            display: inline-block;
-        }
-
-        ul li a {
-            text-decoration: none;
-            text-transform: uppercase;
-            color: #fff;
-            margin-left: 20px;
-        }
-
+      &.show {
+          display: block;
+          text-align: center;
+          height: 100vh;
+      }
     }
 
 }

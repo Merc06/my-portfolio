@@ -9,3 +9,7 @@ $secondary-font: 'Montserrat', sans-serif;
     -moz-text-shadow: 0 0 2px $primary;
     -webkit-text-shadow: 0 0 2px $primary;   
 }
+
+@mixin easeOut {
+    transition: all .3s ease-out;
+}
