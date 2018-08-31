@@ -42,7 +42,11 @@ a:hover {
 }
 
 ul li {
-  list-style-type: none;
+  list-style: none;
+}
+
+ul li a {
+  text-decoration: none;
 }
 
 hr {
@@ -50,17 +54,63 @@ hr {
   background: #332c23;
 }
 
+.menu {
+  position: fixed;
+  margin-top: 2px;
+  cursor: pointer;
+  max-width: 25px;
+  z-index: 2;
+  -webkit-transition: all .3s ease-out;
+  transition: all .3s ease-out;
+  padding: 10px 0;
+}
+
+.menu.scrolled {
+  padding: 30px 0;
+  -webkit-transition: all 300ms linear;
+  transition: all 300ms linear;
+}
+
+.menu .line {
+  background-color: white;
+  width: 25px;
+  height: 3px;
+  margin: 5px 0;
+  -webkit-transition: all .3s ease-out;
+  transition: all .3s ease-out;
+}
+
+.menu.close {
+  -webkit-transform: rotate(180deg);
+          transform: rotate(180deg);
+}
+
+.menu.close .line:nth-child(1) {
+  -webkit-transform: rotate(45deg) translate(5px, 5px);
+          transform: rotate(45deg) translate(5px, 5px);
+}
+
+.menu.close .line:nth-child(2) {
+  opacity: 0;
+}
+
+.menu.close .line:nth-child(3) {
+  -webkit-transform: rotate(-45deg) translate(7px, -6px);
+          transform: rotate(-45deg) translate(7px, -6px);
+}
+
 header {
   position: fixed;
   width: 100%;
-  z-index: 5;
-  background-color: rgba(51, 44, 35, 0.85) !important;
+  z-index: 1;
+  padding: 10px 0;
 }
 
 header.scrolled {
-  padding: 10px 0;
+  padding: 30px 0;
   -webkit-transition: all 300ms linear;
   transition: all 300ms linear;
+  background-color: rgba(51, 44, 35, 0.85) !important;
 }
 
 header.scrolledUp {
@@ -73,89 +123,41 @@ header p, header a {
   color: #fff;
 }
 
-header .content {
-  margin: 20px 0;
+header .row {
   display: -ms-grid;
   display: grid;
+  -ms-grid-columns: 1fr 1fr;
+      grid-template-columns: 1fr 1fr;
   width: 100%;
-  -ms-grid-columns: 10% 20% 70%;
-      grid-template-columns: 10% 20% 70%;
 }
 
-header .content .menu {
-  margin-top: 2px;
-  cursor: pointer;
-  max-width: 25px;
-  -webkit-transition: all .3s ease-out;
-  transition: all .3s ease-out;
-}
-
-header .content .menu .line {
-  background-color: white;
-  width: 25px;
-  height: 3px;
-  margin: 5px 0;
-  -webkit-transition: all .3s ease-out;
-  transition: all .3s ease-out;
-}
-
-header .content .menu.close {
-  -webkit-transform: rotate(180deg);
-          transform: rotate(180deg);
-}
-
-header .content .menu.close .line:nth-child(1) {
-  -webkit-transform: rotate(45deg) translate(5px, 5px);
-          transform: rotate(45deg) translate(5px, 5px);
-}
-
-header .content .menu.close .line:nth-child(2) {
-  opacity: 0;
-}
-
-header .content .menu.close .line:nth-child(3) {
-  -webkit-transform: rotate(-45deg) translate(7px, -6px);
-          transform: rotate(-45deg) translate(7px, -6px);
-}
-
-header .content .brand {
+header .row .col-1 .brand {
   color: white;
   font-size: 2em;
   font-family: "Ubuntu", sans-serif;
   font-weight: bold;
   letter-spacing: 4px;
+  padding-left: 40px;
 }
 
-header .content .brand:hover {
+header .row .col-1 .brand:hover {
   color: #b1ddf1;
   cursor: pointer;
 }
 
-header .content .icons {
-  margin-top: 5px;
-  -ms-grid-column-align: right;
-      justify-self: right;
+header .row .col-2 .icons {
+  margin-top: 9px;
+  float: right;
 }
 
-header .content .icons ul {
+header .row .col-2 .icons ul {
   margin: 0;
   padding: 0;
 }
 
-header .content .icons ul li, header .content .icons p {
+header .row .col-2 .icons ul li, header .row .col-2 .icons p {
   display: inline;
   margin: 3px;
-}
-
-header .menu-nav {
-  display: none;
-  padding: 0;
-}
-
-header .menu-nav.show {
-  display: block;
-  text-align: center;
-  height: 100vh;
 }
 
 .jumbotron {
@@ -413,5 +415,128 @@ header .menu-nav.show {
 #footer {
   background: #332c23;
   margin-top: -20px;
+}
+
+.navigation {
+  visibility: hidden;
+  padding: 0;
+  margin: 0;
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  opacity: .9;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr 1fr;
+      grid-template-columns: 1fr 1fr;
+  z-index: 1;
+}
+
+.navigation.show {
+  visibility: visible;
+}
+
+.navigation a {
+  font-size: 3vw;
+}
+
+.navigation .menu-nav, .navigation .social-nav {
+  width: 100%;
+  margin: 0;
+  padding: 40vh 0;
+  text-align: center;
+}
+
+.navigation .menu-nav {
+  background: #42392d;
+  -webkit-transform: translate3d(0, -100%, 0);
+          transform: translate3d(0, -100%, 0);
+  -webkit-transition: all .3s ease-out;
+  transition: all .3s ease-out;
+}
+
+.navigation .menu-nav.show {
+  -webkit-transform: translate3d(0, 0, 0);
+          transform: translate3d(0, 0, 0);
+}
+
+.navigation .social-nav {
+  background: #332c23;
+  -webkit-transform: translate3d(0, 100%, 0);
+          transform: translate3d(0, 100%, 0);
+  -webkit-transition: all .3s ease-out;
+  transition: all .3s ease-out;
+}
+
+.navigation .social-nav.show {
+  -webkit-transform: translate3d(0, 0, 0);
+          transform: translate3d(0, 0, 0);
+}
+
+.navigation .nav-item {
+  padding: 10px;
+  font-weight: bold;
+  -webkit-transform: translate3d(-600px, 0, 0);
+          transform: translate3d(-600px, 0, 0);
+  -webkit-transition: all .3s ease-out;
+  transition: all .3s ease-out;
+}
+
+.navigation .nav-item.show {
+  -webkit-transform: translate3d(0, 0, 0);
+          transform: translate3d(0, 0, 0);
+}
+
+.navigation .social-item {
+  padding: 10px;
+  -webkit-transform: translate3d(600px, 0, 0);
+          transform: translate3d(600px, 0, 0);
+  -webkit-transition: all .3s ease-out;
+  transition: all .3s ease-out;
+}
+
+.navigation .social-item.show {
+  -webkit-transform: translate3d(0, 0, 0);
+          transform: translate3d(0, 0, 0);
+}
+
+.nav-item:nth-child(1) {
+  -webkit-transition-delay: 0.1s;
+          transition-delay: 0.1s;
+}
+
+.nav-item:nth-child(2) {
+  -webkit-transition-delay: 0.2s;
+          transition-delay: 0.2s;
+}
+
+.nav-item:nth-child(3) {
+  -webkit-transition-delay: 0.3s;
+          transition-delay: 0.3s;
+}
+
+.nav-item:nth-child(4) {
+  -webkit-transition-delay: 0.4s;
+          transition-delay: 0.4s;
+}
+
+.social-item:nth-child(1) {
+  -webkit-transition-delay: 0.1s;
+          transition-delay: 0.1s;
+}
+
+.social-item:nth-child(2) {
+  -webkit-transition-delay: 0.2s;
+          transition-delay: 0.2s;
+}
+
+.social-item:nth-child(3) {
+  -webkit-transition-delay: 0.3s;
+          transition-delay: 0.3s;
+}
+
+.social-item:nth-child(4) {
+  -webkit-transition-delay: 0.4s;
+          transition-delay: 0.4s;
 }
 /*# sourceMappingURL=styles.css.map */

@@ -43,7 +43,11 @@ a:hover {
 }
 
 ul li {
-    list-style-type: none;
+    list-style: none;
+
+    a {
+        text-decoration: none;
+    }
 }
 
 hr {

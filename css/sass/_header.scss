@@ -1,15 +1,63 @@
 // HEADER CSS
 
+// NAVIGATION BUTTON
+.menu {
+    position: fixed;
+    margin-top: 2px;
+    cursor: pointer;
+    max-width: 25px;
+    z-index: 2;
+    @include easeOut;
+    padding: 10px 0;
+
+    // HEADER ANIMATION WHEN SCROLLED
+    &.scrolled {
+        padding: 30px 0;
+        transition: all 300ms linear;
+    }
+
+    .line {
+        background-color: white;
+        width: 25px;
+        height: 3px;
+        margin: 5px 0;
+        @include easeOut;
+    }
+
+    // Rotate Menu button into X
+    &.close {
+        transform: rotate(180deg);
+
+        .line {
+            // Line 1 - Rotate
+            &:nth-child(1) {
+                transform: rotate(45deg) translate(5px, 5px);
+            }
+            // Line 2 - Hide
+            &:nth-child(2) {
+                opacity: 0;
+            }
+            // Line 3 - Rotate
+            &:nth-child(3) {
+                transform: rotate(-45deg) translate(7px, -6px);
+            }
+        }
+    }
+
+}
+
+
 header {
     position: fixed;
     width: 100%;
-    z-index: 5;
-    background-color: rgba($primary, .85) !important;
+    z-index: 1;
+    padding: 10px 0;
 
+    // HEADER ANIMATION WHEN SCROLLED
     &.scrolled {
-        padding: 10px 0;
+        padding: 30px 0;
         transition: all 300ms linear;
-
+        background-color: rgba($primary, .85) !important;
     }
 
     &.scrolledUp {
@@ -21,88 +69,49 @@ header {
         color: #fff;
     }
 
-    .content {
-        margin: 20px 0;
+    // HEADER NAV
+    .row {
         display: grid;
+        grid-template-columns: 1fr 1fr;
         width: 100%;
-        grid-template-columns: 10% 20% 70%;
 
-        .menu {
-            margin-top: 2px;
-            cursor: pointer;
-            max-width: 25px;
-            @include easeOut;
+        .col-1 {
 
-            .line {
-                background-color: white;
-                width: 25px;
-                height: 3px;
-                margin: 5px 0;
-                @include easeOut;
-            }
-
-            // Rotate Menu button into X
-            &.close {
-                transform: rotate(180deg);
-
-                .line {
-                    // Line 1 - Rotate
-                    &:nth-child(1) {
-                        transform: rotate(45deg) translate(5px, 5px);
-                    }
-                    // Line 2 - Hide
-                    &:nth-child(2) {
-                        opacity: 0;
-                    }
-                    // Line 3 - Rotate
-                    &:nth-child(3) {
-                        transform: rotate(-45deg) translate(7px, -6px);
-                    }
+            .brand {
+                color: white;
+                font-size: 2em;
+                font-family: $head-font;
+                font-weight: bold;
+                letter-spacing: 4px;
+                padding-left: 40px;
+        
+                &:hover {
+                    color: $secondary;
+                    cursor: pointer;
                 }
             }
 
         }
 
-        .brand {
-            color: white;
-            font-size: 2em;
-            font-family: $head-font;
-            font-weight: bold;
-            letter-spacing: 4px;
+        .col-2 {
 
-            &:hover {
-                color: $secondary;
-                cursor: pointer;
-            }
-        }
-
-        .icons {
-            margin-top: 5px;
-            justify-self: right;
-            
-            ul {
-                margin: 0;
-                padding: 0;
-            }
-
-            ul li, p {
-                display: inline;
-                margin: 3px;
+            .icons {
+                margin-top: 9px;
+                float: right;
+                
+                ul {
+                    margin: 0;
+                    padding: 0;
+                }
+        
+                ul li, p {
+                    display: inline;
+                    margin: 3px;
+                }
+        
             }
 
         }
-
-    }
-
-    .menu-nav {
-      display: none;
-      padding: 0;
-
-      &.show {
-          display: block;
-          text-align: center;
-          height: 100vh;
-      }
     }
 
 }
