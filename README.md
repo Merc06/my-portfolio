@@ -4,6 +4,9 @@ This portfolio was build by all by myself and the purpose is to practice on fron
 
 ### Please follow me on Social Media Accounts
 
-facebook    : https://www.facebook.com/m3rc0506 <br>
-instagram   : https://www.instagram.com/merc_lja <br>
-github      : https://github.com/Merc06 <br>
+<ul>
+    <li>facebook    : https://www.facebook.com/m3rc0506</li>
+    <li>instagram   : https://www.instagram.com/merc_lja</li>
+    <li>github      : https://github.com/Merc06</li>
+</ul>
+ 
